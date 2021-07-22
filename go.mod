@@ -1,4 +1,4 @@
-module ylog
+module github.com/yuwingo/ylog
 
 go 1.13
 
