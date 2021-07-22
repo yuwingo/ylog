@@ -9,7 +9,7 @@ type YLogger struct {
 }
 
 type Config struct {
-	FileConfig *FileConfig `yaml:"fileConfig"`
+	FileConfig *FileConfig `mapstructure:"fileConfig"`
 }
 
 var (

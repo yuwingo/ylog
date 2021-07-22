@@ -19,12 +19,12 @@ type FileHandler struct {
 }
 
 type FileConfig struct {
-	LogFilePath string `yaml:"path"`         // 日志路径
-	MaxSize     int    `yaml:"max_size"`     // 单个日志最大的文件大小. 单位: MB
-	MaxBackups  int    `yaml:"max_backups"`  // 日志文件最多保存多少个备份
-	MaxAge      int    `yaml:"max_age"`      // 文件最多保存多少天
-	Console     bool   `yaml:"console"`      // 是否命令行输出，开发环境可以使用
-	LevelString string `yaml:"level_string"` // 输出的日志级别, 值：debug,info,warn,error,panic,fatal
+	LogFilePath string `mapstructure:"path"`         // 日志路径
+	MaxSize     int    `mapstructure:"max_size"`     // 单个日志最大的文件大小. 单位: MB
+	MaxBackups  int    `mapstructure:"max_backups"`  // 日志文件最多保存多少个备份
+	MaxAge      int    `mapstructure:"max_age"`      // 文件最多保存多少天
+	Console     bool   `mapstructure:"console"`      // 是否命令行输出，开发环境可以使用
+	LevelString string `mapstructure:"level_string"` // 输出的日志级别, 值：debug,info,warn,error,panic,fatal
 }
 
 func NewFileHandler(c *FileConfig) *FileHandler {
